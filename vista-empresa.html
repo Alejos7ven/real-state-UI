@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perfil</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="libraries/jquery.js"></script>
+        <script src="libraries/jquery.resmenu.js"></script>
+        <script src="libraries/jquery.validate.js"></script>
+        <script src="libraries/validate.aditional_methods.js"></script>
+        <script src="libraries/jquery-migrate.js"></script>
+        <script src="js/acciones.js"></script>
+        <script src="js/validar_form.js"></script>
+    </head>
+    
+    <!--Fin head!-->
+
+    <body>
+        <header>
+            
+            <!--Menu!-->
+
+            <nav class="menu_container">
+                <ul id="menu1">
+                    <li><a href="#"><img src="icons/favicon.ico" ></a></li>
+                    <li><a href="#" id="perfil">Gestionar</a>
+                        <ul>
+                            <li><a href="vista-empresa.html">Datos</a></li>
+                            <li><a href="#" class="mostrar_asig">Asignar inmueble</a></li>
+                            <li><a href="#" class="mostrar_fagg">Agregar empleado</a></li>
+                            <li><a href="#">Solicitudes</a></li>
+                            <li><a href="#" class="mostrar_venta">Poner en alquiler</a></li>
+                        </ul>
+                    </li>
+                    <li class="buscador"><form action="resultados.html" id="barra_bus"> <input type="search" name="buscador" id="buscador" placeholder="buscar"><input type="submit" name="buscar" id="buscar" value="buscar"></form></li>
+                    <li><a href="#">Ayuda</a>
+                        <ul> 
+                            <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ver como</a>
+                        <ul>
+                            <li><a href="index.html">Usuario General</a></li>
+                            <li><a href="vista-usuario.html">Cuenta Particular</a></li>
+                            <li><a href="vista-empresa.html">Cuenta empresa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--fin menu-->
+            
+        </header>
+        <div class="overlay"></div><div class="float_form">
+
+            <!--Ventanas flotantes-Formulario de alquiler-->
+
+            <form name="poner_venta" id="poner_venta">
+                <center><h2>Poner en alquiler un inmueble</h2></center>
+                <center><table>
+                    <tr>
+                        <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                    </tr>
+                    <tr>
+                        <td><label for="titulo">Título: <img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="titulo" id="titulo" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dir">Dirección:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="dir" id="dir" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="descrip">Descripción: <img src="icons/required.gif"></label></td>
+                        <td><textarea name="descrip" id="descrip" cols="30" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="total">Precio total:<img src="icons/required.gif"> </label></td>
+                        <td><input type="text" name="total" id="total" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cuotas">Seleccione plan de cuotas a ofrecer:<img src="icons/required.gif"> </label></td>
+                        <td>
+                            <select name="cuotas" id="cuotas">
+                                <option value="" disabled selected>--Selecciona--</option>
+                                <option value="3">3 meses</option>
+                                <option value="6">6 meses</option>
+                                <option value="12">12 meses</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="tipo_im">Tipo de inmueble:<img src="icons/required.gif"></label></td>
+                        <td><Select name="tipo_im" id="tipo_im">
+                            <option value="" disabled selected>--Selecciona--</option>
+                            <option value="Casa">Casa</option>
+                            <option value="edif">Edificio</option>
+                            <option value="local">Local</option>
+                            <option value="otro">otro</option>
+                        </Select></td> 
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="text" name="otro_tipo" id="otro_tipo" placeholder="Especifíca el tipo de inmueble."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="contrat">Contratista:</label></td>
+                        <td><input type="text" name="contrat" id="contrat" value="Jose Demarzo" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>imagen:</td>
+                        <td><label for="fotos" id="upload" class="boton_datos"><img src="icons/upload.png"> subir imagen</label></td>
+                        <input type="file" name="fotos" id="fotos">
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="Limpiar campos" class="boton_datos"></td>
+                        <td><input type="submit" value="Publicar" class="boton_datos"></td>
+                    </tr>
+                </table></center>
+            </form>
+
+            <!--fin formulario alquiler-->
+
+            <center><form id="agg_emp">
+                <table class="agg_emp">
+                    <tr>
+                        <td colspan="2"><h2 class="float_titulos">Agregar empleado a la empresa</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nro"> Nro Cuenta:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="nro" id="nro" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="labor">Labor:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="labor" id="labor" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="Limpiar campos" class="boton_datos"></td>
+                        <td><input type="submit" value="Agregar" class="boton_datos" name="agg" id="agg"></td>
+                    </tr>
+                </table>
+            </form></center>
+            
+            <!--fin citas-->
+            
+            <center><form id="asig">
+                <table class="asig">
+                    <tr>
+                        <td colspan="2"><h2 class="float_titulos">Asignar un inmueble a un empleado</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cod_emp">Codigo de empleado:<img src="icons/required.gif"></label></td>
+                        <td>
+                            <select name="cod_emp" id="cod_emp">
+                                <option value="" disabled selected>--Selecciona--</option>
+                                <option value="1">1--Juan</option>
+                                <option value="2">2--Alicia</option>
+                                <option value="3">3--Pepe</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cod_inm">Codigo de inmueble:<img src="icons/required.gif"></label></td>
+                        <td>
+                            <select name="cod_inm" id="cod_inm">
+                                <option value="" disabled selected>--Selecciona--</option>
+                                <option value="XXXX">XXXX--casa amoblada</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="Limpiar campos" class="boton_datos"></td>
+                        <td><input type="submit" value="Asignar" name="asignar" id="asignar" class="boton_datos"></td>
+                    </tr>
+                </table>
+            </form></center>
+           
+        </div>
+
+        <!--fin ventanas flotastes- inicio wrapper-->
+
+        <section class="wrapper">
+            <center><h2>Datos</h2></center>
+            <ul id="resultados">
+                <li> <table>
+                    <tr>
+                        <td><h3>Persona responsable:</h3></td>
+                        <td>Pepe Perez</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Teléfono del responsable:</h3></td>
+                        <td>XXXX-XXXX-XXX</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Codigo de empresa:</h3></td>
+                        <td>500300400</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Nombre comercial:</h3></td>
+                        <td>Anon.CA</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Tipo empresa:</h3></td>
+                        <td>Privada</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Dirección:</h3></td>
+                        <td>Av. Orleans Calle 5 entre 6 y 7 local 2</td>
+                    </tr>
+                </table></li>
+                <li><center><h2>Mis empleados</h2></center>
+                     <table id="empleados">
+                         <tr>
+                             <td><img src="icons/porfile.ico" class="empleados_img"></td>
+                             <td>Juan Gómez <br> nro Cuenta 07060708-Codigo de empleado: 1 <a href="#" class="boton_datos"><img src="icons/trash.png"> Eliminar</a> <div class="mostrar_asig"><a href="#" class="boton_datos" ><img src="icons/book.png">Asignar inmueble</a></div></td>
+                         </tr>
+                         <tr>
+                            <td><img src="icons/porfile.ico" class="empleados_img"></td>
+                            <td>Alicia Sanz <br> nro Cuenta 07060709-Codigo de empleado: 2 <a href="#" class="boton_datos"><img src="icons/trash.png"> Eliminar</a> <div class="mostrar_asig"><a href="#" class="boton_datos"><img src="icons/book.png">Asignar inmueble</a></div></td>
+                        </tr>
+                        <tr>
+                            <td><img src="icons/porfile.ico" class="empleados_img"></td>
+                            <td>Pepe Perez <br> nro Cuenta 07060710-Codigo de empleado: 3 <a href="#" class="boton_datos"><img src="icons/trash.png"> Eliminar</a> <div class="mostrar_asig"><a href="#" class="boton_datos"><img src="icons/book.png">Asignar inmueble</a></div></td>
+                        </tr>
+                     </table>
+                </li>
+            </ul>
+             
+        </section>
+
+        <!--fin wrapper- inicio aside-->
+
+            <aside>
+                <h2>Podría interesarte:</h2>
+                <table>
+                    <tr >
+                        <td >
+                            <img src="casas/1.JPG" class="pics_aside" id="pic1">
+                        </td>
+                        <td class="descrip">
+                            <h3>Casa amoblada</h3> <br>
+                            <b>75 EUR per month</b>
+                            <a href="#" class="vinc_as">Detalles</a>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td >
+                            <img src="casas/2.JPG" class="pics_aside" id="pic2" >
+                        </td>
+                        <td class="descrip">
+                            <h3>Hermosa casa 3 habitaciones</h3><br> 
+                            <b>105 EUR per month</b>
+                            <a href="#" class="vinc_as">Detalles</a>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td >
+                            <img src="casas/3.JPG" class="pics_aside" id="pic3" >
+                        </td>
+                        <td class="descrip">
+                            <h3>En Alquiler</h3> <br>
+                            <b>309 EUR per month</b>
+                            <a href="#" class="vinc_as">Detalles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><center>NOTA: haz click en las imagenes para una vista previa</center></td>
+                    </tr>
+                </table>
+            </aside> 
+
+            <!--fin aside- inicio footer-->
+
+            <footer>
+                <center><h3>Elaborado por Jose De Marzo.</h3></center>
+                <center><p>Atencion: esto es un prototipo no funcional, esta abierto a pequeños bugs como problemas de responsividad, y algunas areas son simplemente esquemas representativos. ¡Esta pagina en netamente frontend!</p></center>
+            </footer>
+
+            <!--fin footer-->
+    </body>
+</html>

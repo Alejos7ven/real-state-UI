@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inmobiliaria Website</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="libraries/jquery.js"></script>
+        <script src="libraries/jquery.resmenu.js"></script>
+        <script src="libraries/jquery.validate.js"></script>
+        <script src="libraries/jquery-migrate.js"></script>
+        <script src="js/acciones.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="menu_container">
+                <ul id="menu1">
+                    <li><a href="#"><img src="icons/favicon.ico" ></a></li>
+                    <li><a href="#" id="join">Unete</a></li>
+                    <li class="buscador"><form id="barra_bus" action="resultados.html"> <input type="search" name="buscador" id="buscador" placeholder="buscar"><input type="submit" name="buscar" id="buscar" value="buscar"></form></li>
+                    <li><a href="#">Ayuda</a>
+                        <ul> 
+                            <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">Ver como</a>
+                        <ul>
+                            <li><a href="index.html">Usuario General</a></li>
+                            <li><a href="vista-usuario.html">Cuenta Particular</a></li>
+                            <li><a href="vista-empresa.html">Cuenta empresa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--fin menu-->
+
+        </header>
+
+        <!--menus flotantes-->
+
+        <div class="overlay"></div><div class="float_form">
+             <a href="#" id="float_a1">Registrate</a> <a href="#" id="float_a2">Ingresa</a>
+             <form name="sing_in" id="sngin">
+                 <table class="sing_in">
+                    <tr>
+                        <td><label for="num_c">Número de cuenta:</label></td>
+                        <td><input type="text" name="num_c" id="num_c" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Contraseña:</label></td>
+                        <td><input type="password" name="pass" id="pass" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td class="forgot"><center>Olvidó su Contraseña?</center></td>
+                        <td> <input type="submit" value="Entrar" name="send" id="enviar"> </td>
+                    </tr>
+                    
+                 </table>
+             </form>
+
+             <!--fin login-->
+
+             <form name="sing_up" id="sngup"><table class="sing_up">
+                    <tr>
+                        <td><label for="tipo">Tipo de cuenta:</label> </td>
+                        <td><select name="tipo" id="tipo">
+                            <option value="" disabled >--Selecciona--</option>
+                            <option value="particular" selected>Particular</option>
+                            <option value="empresa">Empresa</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="nombre">Nombre:</label> </td>
+                        <td><input type="text" name="nombre" id="nombre" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dir">Dirección:</label></td>
+                        <td><input type="text" name="dir" id="dir" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tlf">Numero de celular:</label></td>
+                        <td><input type="text" name="tlf" id="tlf" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="persona_r" class="responsable">Nombre de persona responsable:</label></td>
+                        <td><input type="text" name="persona_r" id="persona_r" class="responsable" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label id="label_interes">Que le gustaría alquilar?</label><label id="label_tipo">Tipo de empresa:</label> </td>
+                        <td>
+                            <table class="intereses">
+                                <tr>
+                                    <td><label for="casa">Casa</label><input type="checkbox" name="interes" id="casa" value="Casa"><br></td>
+                                    <td><label for="local">Locales</label><input type="checkbox" name="interes" id="local" value="local"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="terreno">Terrenos</label><input type="checkbox" name="interes" id="terreno" value="terreno"></td>
+                                    <td> <label for="edificio">Edificios</label><input type="checkbox" name="interes" id="edificio" value="edificio"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="otro">otros</label><input type="checkbox" name="interes" id="otro" value="otro"></td>
+                                </tr>
+                            </table> 
+                            <select name="tipo_e" id="tipo_e">
+                                <option value="">---Selecciona---</option>
+                                <option value="publica">Publica</option>
+                                <option value="privada">Privada</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw">Contraseña</label></td>
+                        <td><input type="password" name="psw" id="psw" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="c_psw">Confirmar Contraseña</label></td>
+                        <td><input type="password" name="c_psw" id="c_psw" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><center><input type="reset" value="Vaciar campos" name="cln" id="vaciar"></center></td>
+                        <td><center><input type="submit" value="Enviar" name="send" id="enviar"></center></td>
+                    </tr>
+             </table></form>
+
+             <!--fin registro-fin ventanas flotantes-->
+
+        </div>
+        <section class="wrapper_faq">
+            <center><h2>Esta sección es usada para describir algunas funciones del sitio, no es una pagina FAQ, solo es un esquema.</h2></center>
+                <div class="seccion" ><h3 id="vg">Vista General (pagina principal)</h3>
+                <div class="funciones" id="fvg">
+                    <div class="funcion"><h3 id="fvg1">Boton Unete (menu superior)</h3></div>
+                    <div class="descripcion" id="dvg1">Despliega ventana flotante con formularios de login y registro.</div>
+                    <div class="funcion"><h3 id="fvg2">Botones ingreso y registro (contenido principal)</h3></div>
+                    <div class="descripcion" id="dvg2">Despliega la respectiva ventana flotante con formularios de login o registro.</div>
+                    <div class="funcion"><h3 id="fvg3">Imagenes con efecto (aside)</h3></div>
+                    <div class="descripcion" id="dvg3">Al hacer click en una imagen del aside esta hara un efecto de zoom para visualizarla mejor.</div>
+                    <div class="funcion"><h3 id="fvg4">boton buscar  (menu superior)</h3></div>
+                    <div class="descripcion" id="dvg4">lleva a una pagina de resultados simulando un comportamiento similar al de un buscador funcional.</div>
+                    <div class="funcion"><h3 id="fvg5">Ver como  (menu superior)</h3></div>
+                    <div class="descripcion" id="dvg5">Es un boton unicamente presente en el prototipo para poder tener acceso a las multiples vistas del mismo.</div>
+                </div>
+
+                </div>
+                <div class="seccion" ><h3 id="vu">Vista Usuario (cuenta particular)</h3>
+                    <div class="funciones" id="fvu">
+                        <div class="funcion"><h3 id="fvu1">Boton citas- citas pendientes (menu superior y contenido principal)</h3></div>
+                        <div class="descripcion" id="dvu1">Despliega ventana flotante con información de las citas proximas disponibles.</div>
+                        <div class="funcion"><h3 id="fvu2">Boton poner en alquiler (menu superior y contenido principal)</h3></div>
+                        <div class="descripcion" id="dvu2">Despliega la respectiva ventana flotante con formulario para poner en alquiler un inmueble.</div>
+                        <div class="funcion"><h3 id="fvu3">Mis Contratos (menu superior y contenido principal)</h3></div>
+                        <div class="descripcion" id="dvu3">Muestra una ventana con una lista de los contratos realizados, cada contrato contiene una vista previa del mismo.(los botones de abonar no funcionan)</div>
+                    </div>
+                </div>
+                <div class="seccion" ><h3 id="ve">Vista Empresa (cuenta empresa)</h3>
+                    <div class="funciones" id="fve">
+                        <div class="funcion"><h3 id="fve1">Boton asignar inmueble (menu superior y contenido principal)</h3></div>
+                        <div class="descripcion" id="dve1">Despliega ventana flotante con formulario para asignar un inmueble a un empleado de la empresa.</div>
+                        <div class="funcion"><h3 id="fve2">Boton Agregar empleado (menu superior)</h3></div>
+                        <div class="descripcion" id="dve2">Despliega la respectiva ventana flotante con formulario para añadir un nuevo empleado a la empresa.</div>
+                    </div>
+                </div>
+                <div class="seccion" ><h3 id="vr">Vista resultados (pagina de resultados)</h3>
+                    <div class="funciones" id="fvr">
+                        <div class="funcion"><h3 id="fvr1">Boton agendar cita (contenido principal)</h3></div>
+                        <div class="descripcion" id="dvr1">Despliega ventana flotante con formulario agendar una cita para ver un inmueble.</div>
+                        <div class="funcion"><h3 id="fvr2">Boton hacer contrato (contenido principal)</h3></div>
+                        <div class="descripcion" id="dvr2">Despliega la respectiva ventana flotante con formulario realizar la solicitud de contrato para la propiedad.</div>
+                    </div>
+                </div>
+        </section>
+
+            <!--fin wrapper-->
+
+            
+            
+
+            <!--fin aside-->
+            <footer>
+                <center><h3>Elaborado por Jose De Marzo.</h3></center>
+                <center><p>Atencion: esto es un prototipo no funcional, esta abierto a pequeños bugs como problemas de responsividad, y algunas areas son simplemente esquemas representativos. ¡Esta pagina en netamente frontend!</p></center>
+            </footer>
+    </body>
+</html>

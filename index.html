@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inmobiliaria Website</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="libraries/jquery.js"></script>
+        <script src="libraries/jquery.resmenu.js"></script>
+        <script src="libraries/jquery.validate.js"></script>
+        <script src="libraries/validate.aditional_methods.js"></script>
+        <script src="libraries/jquery-migrate.js"></script>
+        <script src="js/acciones.js"></script>
+        <script src="js/validar_form.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="menu_container">
+                <ul id="menu1">
+                    <li><a href="#"><img src="icons/favicon.ico" ></a></li>
+                    <li><a href="#" id="join">Unete</a></li>
+                    <li class="buscador"><form id="barra_bus" action="resultados.html"> <input type="search" name="buscador" id="buscador" placeholder="buscar"><input type="submit" name="buscar" id="buscar" value="buscar"></form></li>
+                    <li><a href="#">Ayuda</a>
+                        <ul> 
+                            <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">Ver como</a>
+                        <ul>
+                            <li><a href="index.html">Usuario General</a></li>
+                            <li><a href="vista-usuario.html">Cuenta Particular</a></li>
+                            <li><a href="vista-empresa.html">Cuenta empresa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--fin menu-->
+
+        </header>
+
+        <!--menus flotantes-->
+
+        <div class="overlay"></div><div class="float_form">
+             <a href="#" id="float_a1">Registrate</a> <a href="#" id="float_a2">Ingresa</a>
+             <form name="sing_in" id="sgnin">
+                 <table class="sing_in">
+                     <tr>
+                         <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                     </tr>
+                    <tr>
+                        <td><label for="num_c">Número de cuenta:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="num_c" id="num_c" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Contraseña:<img src="icons/required.gif"></label></td>
+                        <td><input type="password" name="pass" id="pass" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td class="forgot"><center>Olvidó su Contraseña?</center></td>
+                        <td> <input type="submit" value="Entrar" name="send" id="enviar"> </td>
+                    </tr>
+                    
+                 </table>
+             </form>
+
+             <!--fin login-->
+
+             <form name="sing_up" id="sgnup"><table class="sing_up">
+                 <tr><td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td></tr>
+                    <tr>
+                        <td><label for="tipo">Tipo de cuenta:</label> </td>
+                        <td><select name="tipo" id="tipo">
+                            <option value="" disabled >--Selecciona--</option>
+                            <option value="particular" selected>Particular</option>
+                            <option value="empresa">Empresa</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="nombre">Nombre:<img src="icons/required.gif"></label> </td>
+                        <td><input type="text" name="nombre" id="nombre" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dir">Dirección:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="dir" id="dir" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tlf">Numero de celular:</label></td>
+                        <td><input type="text" name="tlf" id="tlf" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="persona_r" class="responsable">Nombre de persona responsable:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="persona_r" id="persona_r" class="responsable" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label id="label_interes">Que le gustaría alquilar?<img src="icons/required.gif"></label><label id="label_tipo">Tipo de empresa:<img src="icons/required.gif"></label> </td>
+                        <td class="intereses">
+                                <label for="casa">Casa</label> <input type="checkbox" name="interes" id="casa" value="Casa"><br><br>
+                                <label for="local">Locales</label> <input type="checkbox" name="interes" id="local" value="local"><br><br>
+                                <label for="terreno">Terrenos</label> <input type="checkbox" name="interes" id="terreno" value="terreno"><br><br>
+                                <label for="edificio">Edificios</label> <input type="checkbox" name="interes" id="edificio" value="edificio"><br><br>
+                                <label for="otro">otros</label> <input type="checkbox" name="interes" id="otro" value="otro">
+                           
+                            
+                        </td>
+                        <td>
+                            <select name="tipo_e" id="tipo_e">
+                                <option value="" disabled selected>---Selecciona---</option>
+                                <option value="publica">Publica</option>
+                                <option value="privada">Privada</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw">Contraseña:<img src="icons/required.gif"></label></td>
+                        <td><input type="password" name="psw" id="psw" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="c_psw">Confirmar Contraseña:<img src="icons/required.gif"></label></td>
+                        <td><input type="password" name="c_psw" id="c_psw" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><center><input type="reset" value="Vaciar campos" name="cln" id="vaciar"></center></td>
+                        <td><center><input type="submit" value="Enviar" name="send" id="enviar"></center></td>
+                    </tr>
+             </table></form>
+
+             <!--fin registro-fin ventanas flotantes-->
+
+        </div>
+        <section class="wrapper">
+                <img src="icons/form.png" id="img_ppal"><h1>Bienvendo/a!</h1>
+                <article>Contacta ahora con uno de nuestros propietarios
+                    para comenzar a adquirir numerosos inmuebles en optimas condiciones y lo mejor ¡adaptados a tu presupuesto!. No busques mas!
+                    <b>inmobiliaria.com</b> te brinda las mejores opciones para ti y para los tuyos con propiedades que te brindaran la mejor calidad de vida
+                     Porque tu bienestar es nuestra mayor prioridad.
+                     <h2>¿Cuales son nuestros objetivos?</h2>
+                    <b>la inmobiliaria.com</b> se encarga de dar publicidad a los inmuebles que ofrece en alquiler, tanto en prensa local como nacional
+                    entrevista a los posibles inquilinos, organiza las visitas a los inmuebles, y negocia los contratos de alquiler. <br>
+                    <h2 class="importante">NOTA: Visita la sección <a href="faq.html">Ayuda/Preguntas frecuentes</a>   para obtener información del funcionamiento de esta versión prototipo.</h2>
+                </article>
+                <a href="#" class="boton_wra" id="sing_up"><img src="icons/login.png" >Registrate! </a><a href="#" class="boton_wra" id="sing_in"><img src="icons/login.png" >Ingresa!</a>
+            </section>
+
+            <!--fin wrapper-->
+
+            <aside>
+                <h2>Patrocinado:</h2>
+                <table>
+                    <tr >
+                        <td >
+                            <img src="casas/1.JPG" class="pics_aside" id="pic1">
+                        </td>
+                        <td class="descrip">
+                            <h3>Casa amoblada</h3> <br>
+                            <b>75 EUR per month</b>
+                            <a href="#" class="vinc_as">Detalles</a>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td >
+                            <img src="casas/2.JPG" class="pics_aside" id="pic2" >
+                        </td>
+                        <td class="descrip">
+                            <h3>Hermosa casa 3 habitaciones</h3><br> 
+                            <b>105 EUR per month</b>
+                            <a href="#" class="vinc_as">Detalles</a>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td >
+                            <img src="casas/3.JPG" class="pics_aside" id="pic3" >
+                        </td>
+                        <td class="descrip">
+                            <h3>En Alquiler</h3> <br>
+                            <b>309 EUR per month</b>
+                            <a href="#" class="vinc_as">Detalles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><center>NOTA: haz click en las imagenes para una vista previa</center></td>
+                    </tr>
+                </table>
+            </aside>
+             
+
+            <!--fin aside-->
+            <footer>
+                <center><h3>Elaborado por Jose De Marzo.</h3></center>
+                <center><p>Atencion: esto es un prototipo no funcional, esta abierto a pequeños bugs como problemas de responsividad, y algunas areas son simplemente esquemas representativos. ¡Esta pagina en netamente frontend!</p></center>
+            </footer>
+    </body>
+</html>

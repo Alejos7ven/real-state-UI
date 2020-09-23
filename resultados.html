@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resultados</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="libraries/jquery.js"></script>
+        <script src="libraries/jquery.resmenu.js"></script>
+        <script src="libraries/jquery.validate.js"></script>
+        <script src="libraries/validate.aditional_methods.js"></script>
+        <script src="libraries/jquery-migrate.js"></script>
+        <script src="js/acciones.js"></script>
+        <script src="js/validar_form.js"></script>
+    </head>
+    
+    <!--Fin head!-->
+
+    <body>
+        <header>
+            
+            <!--Menu!-->
+
+            <nav class="menu_container">
+                <ul id="menu1">
+                    <li><a href="#"><img src="icons/favicon.ico" ></a></li>
+                    <li><a href="#" id="perfil">Perfil</a>
+                        <ul>
+                            <li><a href="vista-usuario.html">Datos</a></li>
+                            <li><a href="#" class="mostrar_contrato">Mis contratos</a></li>
+                            <li><a href="#" class="mostrar_cita">Citas</a></li>
+                            <li><a href="#" class="mostrar_venta">Poner en alquiler</a></li>
+                        </ul>
+                    </li>
+                    <li class="buscador"><form id="barra_bus"> <input type="search" name="buscador" id="buscador" placeholder="buscar" value="casa amoblada"><input type="submit" name="buscar" id="buscar" value="buscar"></form></li>
+                    <li><a href="#">Ayuda</a>
+                        <ul> 
+                            <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ver como</a>
+                        <ul>
+                            <li><a href="index.html">Usuario General</a></li>
+                            <li><a href="vista-usuario.html">Cuenta Particular</a></li>
+                            <li><a href="#">Cuenta empresa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--fin menu-->
+            
+        </header>
+        <div class="overlay"></div><div class="float_form">
+
+            <!--Ventanas flotantes-Formulario de alquiler-->
+
+            <form name="poner_venta" id="poner_venta">
+                <center><h2>Poner en alquiler un inmueble</h2></center>
+                <center><table>
+                    <tr>
+                        <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                    </tr>
+                    <tr>
+                        <td><label for="titulo">Título: <img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="titulo" id="titulo" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dir">Dirección:<img src="icons/required.gif"></label></td>
+                        <td><input type="text" name="dir" id="dir" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="descrip">Descripción: <img src="icons/required.gif"></label></td>
+                        <td><textarea name="descrip" id="descrip" cols="30" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="total">Precio total:<img src="icons/required.gif"> </label></td>
+                        <td><input type="text" name="total" id="total" placeholder="Escribe acá"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cuotas">Seleccione plan de cuotas a ofrecer:<img src="icons/required.gif"> </label></td>
+                        <td>
+                            <select name="cuotas" id="cuotas">
+                                <option value="" disabled selected>--Selecciona--</option>
+                                <option value="3">3 meses</option>
+                                <option value="6">6 meses</option>
+                                <option value="12">12 meses</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="tipo_im">Tipo de inmueble:<img src="icons/required.gif"></label></td>
+                        <td><Select name="tipo_im" id="tipo_im">
+                            <option value="" disabled selected>--Selecciona--</option>
+                            <option value="Casa">Casa</option>
+                            <option value="edif">Edificio</option>
+                            <option value="local">Local</option>
+                            <option value="otro">otro</option>
+                        </Select></td> 
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="text" name="otro_tipo" id="otro_tipo" placeholder="Especifíca el tipo de inmueble."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="contrat">Contratista:</label></td>
+                        <td><input type="text" name="contrat" id="contrat" value="Jose Demarzo" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>imagen:</td>
+                        <td><label for="fotos" id="upload" class="boton_datos"><img src="icons/upload.png"> subir imagen</label></td>
+                        <input type="file" name="fotos" id="fotos">
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="Limpiar campos" class="boton_datos"></td>
+                        <td><input type="submit" value="Publicar" class="boton_datos"></td>
+                    </tr>
+                </table></center>
+            </form>
+
+            <!--fin formulario alquiler-formulario citas-->
+
+            <center><table class="citas">
+                <tr>
+                    <td colspan="2"><h2 class="float_titulos">Mis Citas</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="2">No hay citas aún.</td>
+                </tr>
+                <tr><td></td><td></td></tr>
+            </table></center>
+            
+            <!--fin citas-->
+            
+            <center><table class="contratos">
+                <tr>
+                    <td colspan="2"><h2 class="float_titulos">Mis contratos</h2></td>
+                </tr>
+                <tr>
+                    <td>no hay contratos aún.</td>
+                </tr>
+            </table></center>
+            <center>
+                <form id="form_cita">
+                <table class="form_cita">
+                    <tr>
+                        <td colspan="2"><h2 class="float_titulos">Agenda una cita</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fec">Fecha:<img src="icons/required.gif"></label> </td>
+                        <td><input type="date" name="fec" id="fec"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="hor">Hora:<img src="icons/required.gif"></label></td>
+                        <td><select name="hor" id="hor">
+                            <option value="" disabled selected>--Selecciona--</option>
+                            <option value="7">7:00</option>
+                            <option value="8">8:00</option>
+                            <option value="9">9:00</option>
+                            <option value="10">10:00</option>
+                            <option value="11">11:00</option>
+                            <option value="14">14:00</option>
+                            <option value="15">15:00</option>
+                            <option value="16">16:00</option>
+                            <option value="17">17:00</option>
+                            <option value="18">18:00</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>NOTA: el anunciante se pondrá en contacto con usted en 24h para concretar los detalles de la cita, por favor se paciente.</td>
+                        <td><input type="submit" value="Enviar solicitud" class="boton_datos"></td>
+                    </tr>
+                </table>
+                </form>
+                <form id="form_cont">
+                    <table class="form_cont">
+                        <tr>
+                            <td colspan="2"><h2 class="float_titulos">Haz un contrato por este inmueble</h2></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><center><b><img src="icons/required.gif">Campo requerido</b></center></td>
+                        </tr>
+                        <tr>
+                            <td><label>Metodo de pago:<img src="icons/required.gif"></label></td>
+                            <td>
+                                 <input type="radio" name="pago" id="paypal"><label for="paypal">PayPal</label> <br><br>
+                                 <input type="radio" name="pago" id="visa"><label for="visa">VISA</label> <br><br>
+                                 <input type="radio" name="pago" id="master"><label for="master">MasterCard</label><br>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="tarjeta" id="tarjeta_l">nro. tarjeta:<img src="icons/required.gif"></label></td>
+                            <td><input type="text" name="tarjeta" id="tarjeta"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fecha" id="fecha_l">fecha vencimiento:<img src="icons/required.gif"></label></td>
+                            <td><input type="text" name="fecha" id="fecha"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email" id="email_l">email:<img src="icons/required.gif"></label></td>
+                            <td><input type="text" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="plan">Plan de cuotas:<img src="icons/required.gif"></label></td>
+                            <td>
+                                <select name="plan" id="plan">
+                                    <option value="" disabled selected>--Selecciona--</option>
+                                    <option value="3">3 meses por 300 EUR mensual</option>
+                                    <option value="12">12 meses por 75 EUR mensual</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NOTA: debe realizar su primer deposito y su contrato sera aprovado en un plazo máximo de 24h.</td>
+                            <td><input type="submit" value="Alquilar" name="send" class="boton_datos"></td>
+                        </tr>
+                    </table>
+                </form>
+            </center>
+        </div>
+
+        <!--fin ventanas flotastes- inicio wrapper-->
+
+        <section class="wrapper_result">
+                <center><h2>Resultados</h2></center>
+                <ul id="resultados">
+                    <li><table>
+                        <tr><td rowspan="2" colspan="2"><img src="casas/1.JPG" class="result_img"></td><td><h3>Casa Amoblada</h3></td> <td>75 EUR per month</td>
+                        </tr>
+                        <tr><td><h3>Dir:</h3>calle x con x av x... <h3>Tipo:</h3>Casa <h3>ofrecido por:</h3>Anon.CA</td>
+                        <td><a href="#" class="boton_datos" id="mostrar_details"><img src="icons/th-list.png"> Detalles</a> <a href="#" class="boton_datos" id="mostrar_fcita"><img src="icons/clock.png"> Agendar cita</a> <a href="#" class="boton_datos" id="mostrar_fcont">Hacer contrato</a></td>
+                        </tr>
+                    </table></li>
+                </ul>
+                <center>
+                    <table id="paginizacion">
+                        <tr><td><a href="#" >1</a></td></tr>
+                    </table>
+                    <h4>Resultados: 1  Pagina: 1 de 1</h4>
+                </center>
+        </section>
+
+        <!--fin wrapper-->
+
+            
+
+            <!--inicio footer-->
+
+            <footer>
+                <center><h3>Elaborado por Jose De Marzo.</h3></center>
+                <center><p>Atencion: esto es un prototipo no funcional, esta abierto a pequeños bugs como problemas de responsividad, y algunas areas son simplemente esquemas representativos. ¡Esta pagina en netamente frontend!</p></center>
+            </footer>
+
+            <!--fin footer-->
+    </body>
+</html>

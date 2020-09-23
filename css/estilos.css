@@ -1,0 +1,336 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.wrapper,.wrapper_result{
+    width: 68%;
+    display: inline-block;
+    background-image: url(../icons/wrapper.gif);
+    background-repeat: repeat-x; 
+    margin: 10px .2% 10px .8%;
+    padding: 3px 5px;
+    border-radius: 2%;
+    box-shadow:1px 2px 5px black;
+    min-height: 580px;
+    text-align: justify;
+}
+ul{
+    list-style: none;
+}
+.wrapper_result{
+    width: 95%;
+    background-image: url(../icons/aside.gif);
+    background-repeat: repeat-x;
+}
+div.mostrar_asig{
+    display: inline-block;
+}
+.wrapper_faq{
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.836);
+    margin: 10px .2% 10px .8%;
+    padding: 3px 5px; 
+    box-shadow:1px 2px 5px black;
+    min-height: 590px;
+    color: white;
+    text-align: justify;
+}
+.seccion{ 
+    padding-left: 7px;
+}
+.funciones{
+    padding-left: 30px;
+    font-size: 15px;
+    border-left: 1px dotted white;
+}
+.descripcion{
+    padding-left: 50px;
+    font-size: 14px;
+    border-left: 1px dotted white;
+}
+.wrapper_faq h3{
+    cursor: pointer;
+    padding: 7px;
+    background: url(../icons/caret-right.png) no-repeat 0px 11px;
+}
+.wrapper_faq h3.cerrar{
+    padding: 7px;
+    background: url(../icons/caret-down.png) no-repeat 0px 11px;
+}
+
+#resultados{
+    width: 90%;
+    display: block;
+    list-style: none;
+}
+#resultados .result_img{
+    max-width: 200px;
+    border: 2px solid rgb(124, 202, 253);
+}
+#cuerpo{
+    text-align: justify; 
+}
+#resultados li{
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+#paginizacion a{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+#paginizacion td{
+    border: 1px dotted black;
+}
+#img_ppal{
+    display: block;
+    width: 30%;
+    float: left;
+    z-index: 999;
+}
+ #notificacion{
+     background-color: red;
+     border-radius: 50%; 
+ }
+ .empleados_img{
+     max-width: 50px;
+ }
+ #empleados{
+     width: 100%;
+ }
+ .importante{
+     color: red;
+     font-size: 25px;
+ }
+ .importante a{
+     color: blue;
+     text-decoration: underline;
+ }
+h1{
+    display: block;
+    width: 55%;
+    
+}
+article{
+    display: block;
+    font-size: 16px;
+}
+aside{ 
+    display: inline-block;
+    float: left;
+   padding-left: 5px;padding-right: 5px;
+   text-align: center;
+    background-image: url(../icons/aside.gif);
+    background-repeat: repeat-x; 
+    width: 28%;
+    margin: 10px 0 10px .8%;
+    box-sizing: border-box;
+}
+aside table{
+    margin: 0;
+    width: 100%;
+    text-align: justify;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+} 
+ aside table tr:hover{
+     background-color: rgb(245, 244, 244);
+ }
+ aside h3{
+     font-weight: normal;
+ }
+.pics_aside{
+    width: 100%; 
+    max-width: 120px;
+    min-width: 100px; 
+    cursor: pointer;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+.vinc_as{
+    color: blue;
+}
+.vinc_as:hover{
+    text-decoration: underline;
+}
+.boton_wra{
+    width: 15%;
+    display: block;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+    background-image: url(../icons/header1.jpg);
+    background-repeat: repeat-x;
+    border-left: 1px solid black;
+}
+.boton_wra img{
+    width: 20px;
+    display: inline-block;
+}
+.boton_wra:hover{
+    opacity: .7;
+}
+.float_form{
+    position: absolute;
+    width: 50%;
+    padding: 10px 15px;
+    background-color: white;
+    left: 25%;
+    top: 70px;
+    border-radius: 2%; 
+    opacity: 1;
+    z-index: 1001;
+    min-height: 250px;
+}
+.float_form select{
+    width: 100%; 
+    border: 1px solid white;
+    border-bottom: 2px solid black;
+}
+.float_form textarea{
+    border: none;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    max-width: 200px;
+    max-height: 150px;
+}
+.float_form input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 90%;
+    font-size: 18px;
+    height: 26px;
+}
+#tipo_e{
+    display: none;
+}
+#label_tipo{
+    display: none;
+}
+.responsable{
+    display: none;
+}
+
+.intereses{
+    width: 100%;
+}
+.float_form label{
+    font-weight: normal;
+
+}
+#otro_tipo{
+    display: none;
+}
+#tarjeta,#fecha,#email,#tarjeta_l,#fecha_l,#email_l{
+    display: none;
+}
+.overlay{
+    width: 100%;
+    height: 1000px;
+    display: none; 
+    position: absolute; 
+    z-index: 999;
+    top:0;
+    left:0;
+    opacity: .8;
+    background-color: rgba(43, 42, 42);
+    cursor: pointer;
+} 
+.float_form a{
+    padding: 25px;
+    color: black;
+    display: block;
+    width: 45%; 
+    float: left;
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 1px dotted black;
+    
+}
+.float_titulos{
+    border-bottom: 1px dotted black;
+    font-size: 25px;
+}
+#float_a1{
+    text-decoration: underline;
+}
+#float_a2{
+    border-left: 1px solid black;
+    box-sizing: border-box;
+}
+.sing_up, .sing_in{ 
+    width: 100%;
+    margin: 0 15px;
+}
+.sing_up td{
+    width: 60%;
+}
+.sing_in{
+    display: none;
+    width: 100%;
+    margin: 0;
+}
+.sing_in tr td{ 
+    width: 60%;
+}
+.forgot{
+    color: blue;
+    font-size: 16px;
+    width: 100%;
+
+}
+input[type="checkbox"]{
+    display: block; 
+    margin: 0px;
+    padding: 0; 
+}
+#vaciar, #enviar{ 
+    border: none;
+    background-image: url(../icons/wrapper.gif);
+    background-repeat: repeat-x;
+    padding: 10px;
+    width: 70%;
+}
+.boton_datos{
+    border: none;
+    background-image: url(../icons/wrapper.gif);
+    background-repeat: repeat-x;
+    padding: 10px;
+}
+#vaciar:hover, #enviar:hover, .boton_datos:hover{
+    opacity: .8;
+}
+#fotos{
+    display:none;
+}
+#upload{
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.ajustar{
+    width: 100%;
+    height: 150px;
+}
+footer{
+    margin-top: 30px;
+    background-image: url(../icons/bg.gif);
+    background-repeat: repeat;
+    padding: 15px 0;
+    color: white;
+    width: 100%;
+    position: relative;
+}
+input[type="text"]:focus,input[type="password"]:focus,select:focus,textarea:focus{
+    outline: none;
+    padding: 5px 0;
+    font-size: 18px;
+    border-bottom:2px solid rgb(45, 189, 247);
+}
+label.error{
+    display: block;
+    color:red;
+}
